@@ -1,6 +1,6 @@
-=== Landing Pages for Wordpress ===
+=== Easy Landing Pages ===
 Contributors: kickofflabs, lonnylot
-Tags: kickofflabs, landing pages, splash pages, welcome pages, welcome gate, inbound marketing, conversion pages, split testing,coming soon page, launch page, email list, landing page, list building, squeeze page, landing-pages, sales pages, signup bar, signup widget, referral generation, viral referrals
+Tags: kickofflabs, landing pages, splash pages, welcome pages, coming soon page, launch page, landing page, squeeze page, sales pages, signup bar, referral generation
 Requires at least: 3.5
 Tested up to: 3.5
 License: GPLv2 or later
