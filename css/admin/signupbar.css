@@ -1,0 +1,8 @@
+input, select {
+    width: 200px;
+}
+
+.signupbar-column {
+    float: left;
+    width: 50%;
+}
