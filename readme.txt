@@ -10,7 +10,7 @@ Get More Leads - And Convert More of Them - With Effortless Landing Pages + Smar
 
 == Description ==
 
-Is the hassle of creating landing pages keeping you from making more sales? This plugin allows you to easy publish landing pages, generated from <a href="http://www.kickofflabs.com>KickoffLabs</a>, to your Wordpress site. 
+Is the hassle of creating landing pages keeping you from making more sales? This plugin allows you to easy publish landing pages, generated from <a href="http://www.kickofflabs.com">KickoffLabs</a>, to your Wordpress site. 
 
 You work hard to generate traffic and you need to make the most of it. You need landing pages that go well beyond capturing customer email addresses. 
 
