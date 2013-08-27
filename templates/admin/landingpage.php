@@ -4,6 +4,7 @@
 <div class="wrap">
     <h2>Landing Page</h2>
     <p style="margin-bottom: 40px;">Below you can select a KickoffLabs landing page to be published at any path.</p>
+	<p><iframe src="http://player.vimeo.com/video/70063439" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
     <?php foreach ( $this->currentMessages as $message ) : ?>
         <p style="padding: .5em; background-color: #<?php echo $this->templateMessages[$message]['color']; ?>; color: #fff; font-weight: bold;"><?php echo $this->templateMessages[$message]['text']; ?></p>
     <?php endforeach; ?>

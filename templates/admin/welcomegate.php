@@ -3,6 +3,9 @@
 <?php endif; ?>
 <div class="wrap">
     <h2>Kickofflabs Splash Page</h2>
+	<p>
+		<iframe src="http://player.vimeo.com/video/70144919" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	</p>
     <form action="" method="post" id="kickofflabs-config">
         <?php foreach ( $this->currentMessages as $message ) : ?>
             <p style="padding: .5em; background-color: #<?php echo $this->templateMessages[$message]['color']; ?>; color: #fff; font-weight: bold;"><?php echo $this->templateMessages[$message]['text']; ?></p>
@@ -47,7 +50,12 @@
             <p>
                 Re-display splash page every <input type="text" name="kickofflabs_repeat_visitors_cookie" id="kickofflabs_repeat_visitors_cookie" value="<?php echo $currentConfig[ 'repeat_visitors_cookie' ]; ?>" /> days.
             </p>
-			<p class="submit"><input type="submit" name="submit" value="Update Splash Page" /></p>
+			<p class="submit">
+				<input type="submit" name="submit" value="Update Splash Page" />
+				<?php if( $currentConfig[ 'page_id' ] ): ?>
+					<input type="submit" name="submit" id="submit-remove" value="Remove Splash Page" />
+				<?php endif; ?>
+			</p>
         </div>
     </form>
 </div>

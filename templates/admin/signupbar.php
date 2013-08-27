@@ -4,6 +4,7 @@
 <div class="wrap">
     <h2>Kickofflabs Signup Bar</h2>
     <p>The KickoffLabs Signup Bar allows you to embed a signup bar on any web page or blog as shown below.</p>
+	<p><iframe src="http://player.vimeo.com/video/70063438" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
     <p><img src="<?php echo KICKOFFLABS_IMAGES; ?>api_signup_bar_short.png" /></p>
     <form action="" method="post" id="kickofflabs-config">
         <?php foreach ( $this->currentMessages as $message ) : ?>
@@ -34,7 +35,7 @@
             <p>
                 <input class="signup-bar-settings" name="kickofflabs_button_text" id="kickofflabs_button_text" type="text" value="<?php echo $currentConfig[ 'button_text' ]; ?>" />
             </p>
-            <p><label for="kickofflabs_share_text">Share Text </label></p>
+            <p><label for="kickofflabs_share_text">Thank you message </label></p>
             <p>
                 <input class="signup-bar-settings" name="kickofflabs_share_text" id="kickofflabs_share_text" type="text" value="<?php echo $currentConfig[ 'share_text' ]; ?>" />
             </p>
@@ -42,7 +43,12 @@
             <p>
                 <input class="signup-bar-settings" name="kickofflabs_influenced_count_text" id="kickofflabs_influenced_count_text" type="text" value="<?php echo $currentConfig[ 'influenced_count_text' ]; ?>" />
             </p>
-            <p class="submit"><input type="submit" name="submit" value="Update Signup Bar" /></p>
+            <p class="submit">
+				<input type="submit" name="submit" value="Update Signup Bar" />
+				<?php if( $currentConfig[ 'page_id' ] ): ?>
+					<input type="submit" name="submit" id="submit-remove" value="Remove Signup Bar" />
+				<?php endif; ?>
+			</p>
         </div>
         <div class="signupbar-column">
             <h3>Color Options</h3>

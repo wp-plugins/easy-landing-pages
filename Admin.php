@@ -378,7 +378,7 @@ class KickofflabsLandingAdmin
         // Check if we have this hash in the config
         if( array_key_exists( $hash, $this->landingPages->getConfig() ) ){
             // Delete the page from WordPress
-            wp_delete_post( $currentConfig[ $hash ][ 'wordpress_page_id' ] );
+            wp_delete_post( $currentConfig[ $hash ][ 'wordpress_page_id' ], true );
 
             // Delete the page from our config
             unset( $currentConfig[ $hash ] );
