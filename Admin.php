@@ -186,7 +186,13 @@ class KickofflabsSignupBarAdmin
                 check_admin_referer( KICKOFFLABS_NONCE_KEY );
                 $this->overwriteConfig( $_POST );
                 $this->updated = true;
-            }
+            } elseif( $_POST[ 'remove' ] ) {
+				check_admin_referer( KICKOFFLABS_NONCE_KEY );
+				$removePageConfig = $_POST;
+				$removePageConfig[ 'kickofflabs_landing_page_id' ] = null;
+				$this->overwriteConfig( $removePageConfig );
+				$this->updated = true;
+			}
         }
     }
 
@@ -378,7 +384,7 @@ class KickofflabsLandingAdmin
         // Check if we have this hash in the config
         if( array_key_exists( $hash, $this->landingPages->getConfig() ) ){
             // Delete the page from WordPress
-            wp_delete_post( $currentConfig[ $hash ][ 'wordpress_page_id' ] );
+            wp_delete_post( $currentConfig[ $hash ][ 'wordpress_page_id' ], true );
 
             // Delete the page from our config
             unset( $currentConfig[ $hash ] );
@@ -458,13 +464,19 @@ class KickofflabsWelcomeGateAdmin
                 check_admin_referer( KICKOFFLABS_NONCE_KEY );
                 $this->overwriteConfig( $_POST );
                 $this->updated = true;
-            }
+            } elseif( $_POST[ 'remove' ] ) {
+				check_admin_referer( KICKOFFLABS_NONCE_KEY );
+				$removePageConfig = $_POST;
+				$removePageConfig[ 'kickofflabs_landing_page_id' ] = 0;
+				$this->overwriteConfig( $removePageConfig );
+				$this->updated = true;
+			}
         }
     }
 
     /**
      * @description Overwrite the Welcome Gate config with a new one
-     * @param $signupBar
+     * @param $welcomeGate
      */
     private function overwriteConfig( $welcomeGate )
     {
