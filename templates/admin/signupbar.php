@@ -46,7 +46,7 @@
             <p class="submit">
 				<input type="submit" name="submit" value="Update Signup Bar" />
 				<?php if( $currentConfig[ 'page_id' ] ): ?>
-					<input type="submit" name="submit" id="submit-remove" value="Remove Signup Bar" />
+					<input type="submit" name="remove" id="submit-remove" value="Remove Signup Bar" />
 				<?php endif; ?>
 			</p>
         </div>

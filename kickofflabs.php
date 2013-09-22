@@ -3,7 +3,7 @@
 /*
 Plugin Name: Landing Pages for Wordpress
 Plugin URI: http://www.kickofflabs.com
-Description: Short description
+Description: Get More Leads - And Convert More of Them - With Effortless Landing Pages + Smart Email Marketing + Referral Generation - Now for WordPress!
 Version: 1.1
 Author: KickoffLabs, lonnylot
 Author URI: http://www.kickofflabs.com

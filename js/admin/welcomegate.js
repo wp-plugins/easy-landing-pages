@@ -11,8 +11,4 @@ jQuery(document).ready(function($){
         check_gate( jQuery( this ) );
     })
     check_gate( jQuery( 'input[name="kickofflabs_where_to_gate"]:checked' ) );
-    jQuery('#submit-remove').click(function(){
-        // Remove the landing page id
-        jQuery('#kickofflabs_landing_page_id').val(0);
-    });
 });

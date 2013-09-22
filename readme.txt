@@ -16,12 +16,18 @@ You work hard to generate traffic and you need to make the most of it. You need 
 
 Our service allows you to create great landing pages, automatically email new leads, and generate referrals from engaged customers.  
 
-= Highlights =
+= Publish amazing Landing Pages on your WordPress site =
+<iframe src="//player.vimeo.com/video/73816731?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/73816731">Wordpress Landing Pages With KickoffLabs</a> from <a href="http://vimeo.com/user13604386">Josh Ledgard</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+= Capture leads anywhere on your site with our signup bar and widgets =
+<iframe src="//player.vimeo.com/video/73816732?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/73816732">Wordpress Email Signup Bar with KickoffLabs</a> from <a href="http://vimeo.com/user13604386">Josh Ledgard</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+= Setup a splash page to welcome new visitors to your site and capture email addresses =
+<iframe src="//player.vimeo.com/video/73816729?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/73816729">Wordpress Splash Pages With KickoffLabs</a> from <a href="http://vimeo.com/user13604386">Josh Ledgard</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+= Other Highlights =
 	
-* Publish amazing Landing Pages on your WordPress site.
-* Capture leads anywhere on your site with our signup bar and widgets.
-* Setup a splash page to welcome new visitors to your site and capture email addresses. 
-* Automatically email new leads with our service or send them to services like MailChimp or Aweber. 
+* Automatically email new leads with our service or send them to services like MailChimp or Aweber.
 * Generate referral links for everyone that signs up and motivate them to share with their friends.
 
 = Marketers = 

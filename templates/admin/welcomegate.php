@@ -53,7 +53,7 @@
 			<p class="submit">
 				<input type="submit" name="submit" value="Update Splash Page" />
 				<?php if( $currentConfig[ 'page_id' ] ): ?>
-					<input type="submit" name="submit" id="submit-remove" value="Remove Splash Page" />
+					<input type="submit" name="remove" id="submit-remove" value="Remove Splash Page" />
 				<?php endif; ?>
 			</p>
         </div>
