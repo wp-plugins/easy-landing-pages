@@ -20,8 +20,7 @@ $foundLandingPage = $kickofflabsLandingPages->findByWordpressPageId( $post->ID )
 <div id="full_kickoffpage">
     <script type="text/javascript">
         var frameSource = document.location.protocol +'//embed.kickoffpages.com/<?php echo $foundLandingPage[ 'page_id' ]; ?>/' + window.location.search
-        var ifrm = '<iframe title="<?php echo $foundLandingPage[ 'title' ]; ?>" frameborder="0" src="'+frameSource+'">';
-        //ifrm += '<a href="http://wp-test-2.kickoffpages.com" title="<?php echo $foundLandingPage[ 'title' ]; ?>"><?php echo $foundLandingPage[ 'title' ]; ?></a>';
+        var ifrm = '<iframe title="<?php echo $foundLandingPage[ 'page_title' ]; ?>" frameborder="0" src="'+frameSource+'">';
         ifrm += '</iframe>';
         document.write(ifrm);
     </script>

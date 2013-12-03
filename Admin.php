@@ -527,6 +527,7 @@ class KickofflabsWelcomeGateAdmin
             }
             $newConfig[ 'page_id' ] = $foundLandingPage->page_id;
             $newConfig[ 'title' ] = $foundLandingPage->title;
+			$newConfig[ 'page_title' ] = $foundLandingPage->page_title;
         } else {
             if( $currentConfig[ 'page_id' ] ) {
                 $this->currentMessages[] = 'welcomegate_disabled';

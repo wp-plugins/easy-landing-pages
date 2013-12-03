@@ -87,5 +87,9 @@ Yes. You'll need an account with KickoffLabs to make this work.
 
 == Changelog ==
 
+= 1.2 =
+* Fixed Splash Screen display
+* Change Splash Screen and Signup Bar to use 'wp_footer' instead of 'get_footer' action
+
 = 1.0 =
 * Initial release
