@@ -6,7 +6,7 @@ function check_gate( jQueryObject ) {
     }
 }
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
     jQuery( 'input[name="kickofflabs_where_to_gate"]' ).change(function(){
         check_gate( jQuery( this ) );
     })

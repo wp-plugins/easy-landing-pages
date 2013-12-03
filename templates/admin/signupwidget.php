@@ -9,7 +9,7 @@
 </p>
 <h3>Configuration</h3>
 <p>
-    <label for="<?php echo $this->get_field_id( 'signup_text' ); ?>">Share Text</label>
+    <label for="<?php echo $this->get_field_id( 'signup_text' ); ?>">Signup Text</label>
     <input type="text" id="<?php echo $this->get_field_id( 'signup_text' ); ?>" name="<?php echo $this->get_field_name( 'signup_text' ); ?>" value="<?php echo $instance[ 'signup_text' ]; ?>" />
 </p>
 <p>
@@ -21,7 +21,7 @@
     <input type="text" id="<?php echo $this->get_field_id( 'button_text' ); ?>" name="<?php echo $this->get_field_name( 'button_text' ); ?>" value="<?php echo $instance[ 'button_text' ]; ?>" />
 </p>
 <p>
-    <label for="<?php echo $this->get_field_id( 'share_text' ); ?>">Share Text</label>
+    <label for="<?php echo $this->get_field_id( 'share_text' ); ?>">Thank you message</label>
     <input type="text" id="<?php echo $this->get_field_id( 'share_text' ); ?>" name="<?php echo $this->get_field_name( 'share_text' ); ?>" value="<?php echo $instance[ 'share_text' ]; ?>" />
 </p>
 <p>

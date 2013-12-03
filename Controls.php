@@ -72,7 +72,7 @@ class KickofflabsSignupBar
         // hook into 'get_footer' action to call sidebar
         $currentConfig = $this->getConfig();
         if( $currentConfig[ 'page_id' ] > 0 ) {
-            add_action( 'get_footer', array( $this, 'addSignupBar' ) );
+            add_action( 'wp_footer', array( $this, 'addSignupBar' ) );
             wp_enqueue_script( 'kickofflabs-signupbar', KICKOFFLABS_JS . 'signupbar.js', array(), false, true );
         }
     }
@@ -228,7 +228,7 @@ class KickofflabsWelcomeGate
         if( !defined( 'DOING_AJAX' ) || DOING_AJAX == false ) {
             $currentConfig = $this->getConfig();
             if( $currentConfig[ 'page_id' ] > 0 ) {
-                add_filter( 'template_include', array( $this, 'templateOverride' ) );
+                add_action( 'wp', array( $this, 'enableWelcomeGate' ) );
             }
         }
 
@@ -267,19 +267,23 @@ class KickofflabsWelcomeGate
     }
 
     /**
-     * @description Filter for selecting the landing page template
-     * @param $template
-     * @return string
+     * @description Enables our welcome gate
      */
-    public function templateOverride( $template )
+    public function enableWelcomeGate()
     {
         // Check that this is not a repeat visitor and if this is where we want to show the gate
-        if( $this->isRepeatVisitor() === false && $this->isWhereWeGate() ) {
-            return KICKOFFLABS_TEMPLATES . 'default-welcome-gate.php';
-        }
+        if( $this->isWhereWeGate() ) {
+			// Enqueue our JS
+			wp_enqueue_script( 'jquery' );
+			wp_enqueue_script( 'kickofflabs-welcomegate', KICKOFFLABS_JS . 'welcomegate.js', array( 'jquery' ), false, false );
+			// Enqueue our CSS
+			wp_enqueue_style( 'kickofflabs-welcomegate', KICKOFFLABS_CSS . 'welcomegate.css' );
+			// Localize our WP KOL JS variables
+			wp_localize_script( 'kickofflabs-welcomegate', 'kickofflabs_welcomegate', $this->getConfig() );
 
-        // If it is a repeat visitor or this is not where we want to gate use the regular template
-        return $template;
+			// Add our footer action
+			add_action( 'wp_footer', array( $this, 'addWelcomeGate' ) );
+        }
     }
 
     /**
@@ -302,8 +306,11 @@ class KickofflabsWelcomeGate
         return false;
     }
 
-    public function isRepeatVisitor()
-    {
-        return array_key_exists( 'KOL_repeat_visitor', $_COOKIE );
-    }
+	/**
+	 * Add our welcome gate
+	 */
+	public function addWelcomeGate() {
+		$currentConfig = $this->getConfig();
+		include KICKOFFLABS_TEMPLATES . 'default-welcome-gate.php';
+	}
 }
