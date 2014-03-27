@@ -22,6 +22,18 @@ function checkRepeatVisitor() {
  * Enable our Welcome Gate
  */
 function enableWelcomeGate() {
+    // Modify our head tag
+    var head = jQuery('head');
+    jQuery('meta[name="description"]').remove();
+    jQuery('meta[property="og:title"]').remove();
+    jQuery('meta[property="og:description"]').remove();
+    jQuery('meta[property="og:image"]').remove();
+    head.append(jQuery('<meta>').attr('name', 'description').attr('content', kickofflabs_welcomegate.meta_description))
+        .append(jQuery('<meta>').attr('property', 'og:title').attr('content', kickofflabs_welcomegate.open_graph_title))
+        .append(jQuery('<meta>').attr('property', 'og:description').attr('content', kickofflabs_welcomegate.open_graph_description))
+        .append(jQuery('<meta>').attr('property', 'og:image').attr('content', kickofflabs_welcomegate.open_graph_image));
+
+    // Modify our body
     var kol_location = document.location.protocol +'//embed.kickoffpages.com';
     var body = jQuery('body');
     // Temporarily hide our body
