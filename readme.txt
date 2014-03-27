@@ -4,11 +4,16 @@ Tags: kickofflabs, landing pages, splash pages, welcome pages, coming soon page,
 Requires at least: 3.5
 Tested up to: 3.5
 License: GPLv2 or later
+Tag: 1.4
 
 Get More Leads - And Convert More of Them - With Effortless Landing Pages + Smart Email Marketing + Referral Generation - Now for Wordpress!
 
 
 == Description ==
+
+= <i>Please Read</i> =
+<b><i>This plugin requires you to have a paid account with KickoffLabs.</i></b>
+We help everyone build amazing landing pages and opt-in forms that can be published anywhere. We also enable auto responder emails and a viral boost referral system. It’s a unique combination and we encourage you to check out http://www.kickofflabs.com before downloading this plugin.
 
 Is the hassle of creating landing pages keeping you from making more sales? This plugin allows you to easy publish landing pages, generated from <a href="http://www.kickofflabs.com">KickoffLabs</a>, to your Wordpress site. 
 
@@ -86,6 +91,14 @@ Yes. You'll need an account with KickoffLabs to make this work.
 
 
 == Changelog ==
+
+= 1.4 =
+* Added in meta tags for Landing Page and Splash Page
+* Added plugin icon
+* Re-organize layouts
+
+= 1.3 =
+* Updated readme.txt
 
 = 1.2 =
 * Fixed Splash Screen display
