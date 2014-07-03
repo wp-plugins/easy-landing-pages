@@ -11,6 +11,7 @@ $foundLandingPage = $kickofflabsLandingPages->findByWordpressPageId( $post->ID )
 	<meta content='<?php echo $foundLandingPage[ 'open_graph_image' ]; ?>' property='og:image'>
 	<meta content="<?php echo $foundLandingPage[ 'meta_description' ]; ?>" name="description">
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="generator" content="KickoffLabs">
 	<meta name="robots" content="index, follow">
 	<style>

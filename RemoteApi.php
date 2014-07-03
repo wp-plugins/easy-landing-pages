@@ -8,6 +8,8 @@
  */
 function kickofflabsRemotePost( $path, $body )
 {
+	global $wp_version;
+
 	$host = parse_url( KICKOFFLABS_API_HOST, PHP_URL_HOST );
 	// Build our HTTP call
 	$http_args = array(
@@ -39,6 +41,8 @@ function kickofflabsRemotePost( $path, $body )
  */
 function kickofflabsRemoteGet( $path, $query )
 {
+	global $wp_version;
+
 	$host = parse_url( KICKOFFLABS_API_HOST, PHP_URL_HOST );
 	// Build our HTTP call
 	$http_args = array(

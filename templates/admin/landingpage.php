@@ -1,4 +1,4 @@
-<?php if ( $updated ) : ?>
+<?php if ( isset( $updated ) ) : ?>
 	<div id="message" class="updated fade"><p><strong><?php _e('Options saved.') ?></strong></p></div>
 <?php endif; ?>
 <div class="wrap">

@@ -60,7 +60,7 @@ class KickofflabsAPIAdmin
 		// Update the landing pages
 		if ( current_user_can( 'manage_options' ) ) {
 			// Update our configuration
-			if ( isset($_POST['submit']) ) {
+			if ( isset( $_POST['submit'] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
 				$email = $_POST[ 'kickofflabs_email' ];
 				$password = $_POST[ 'kickofflabs_password' ];
@@ -181,11 +181,11 @@ class KickofflabsSignupBarAdmin
 		// Update the signup bar settings
 		if ( current_user_can( 'manage_options' ) ) {
 			// Add a landing page
-			if( $_POST[ 'submit' ] ) {
+			if( isset( $_POST[ 'submit' ] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
 				$this->overwriteConfig( $_POST );
 				$this->updated = true;
-			} elseif( $_POST[ 'remove' ] ) {
+			} elseif( isset( $_POST[ 'remove' ] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
 				$removePageConfig = $_POST;
 				$removePageConfig[ 'kickofflabs_landing_page_id' ] = null;
@@ -295,7 +295,7 @@ class KickofflabsLandingAdmin
 
 		// Get our list table
 		$listTable = new KickofflabsLandingPageListTable( array(), $this->kickofflabsLandingPages );
-		$listTable->prepare_items( $this->landingPages->getConfig() );
+		$listTable->prepare_items();
 
 		require( KICKOFFLABS_TEMPLATES . 'admin/landingpage.php' );
 	}
@@ -308,14 +308,14 @@ class KickofflabsLandingAdmin
 		// Update the landing pages
 		if ( current_user_can( 'manage_options' ) ) {
 			// Add a landing page
-			if( $_POST[ 'action' ] ) {
+			if( isset( $_POST[ 'action' ] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
-				if( $_POST[ 'kickofflabs_landing_page_id'] && $_POST[ 'kickofflabs_landing_page_path' ] ) {
+				if( array_key_exists('kickofflabs_landing_page_id', $_POST) && $_POST[ 'kickofflabs_landing_page_id'] && array_key_exists('kickofflabs_landing_page_path', $_POST) &&  $_POST[ 'kickofflabs_landing_page_path' ] ) {
 					$this->addLandingPage($_POST[ 'kickofflabs_landing_page_id'], $_POST[ 'kickofflabs_landing_page_path' ] );
 				} else {
 					$this->currentMessages[] = 'new_landing_page_empty';
 				}
-			} elseif ( 'delete' === $_GET[ 'action' ] ) {
+			} elseif ( isset($_GET['action'] ) && 'delete' === $_GET[ 'action' ] ) {
 				$this->deleteLandingPage( $_GET[ 'hash' ] );
 			}
 		}
@@ -464,11 +464,11 @@ class KickofflabsWelcomeGateAdmin
 		// Update the signup bar settings
 		if ( current_user_can( 'manage_options' ) ) {
 			// Add a landing page
-			if( $_POST[ 'submit' ] ) {
+			if( isset( $_POST[ 'submit' ] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
 				$this->overwriteConfig( $_POST );
 				$this->updated = true;
-			} elseif( $_POST[ 'remove' ] ) {
+			} elseif( isset( $_POST[ 'remove' ] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
 				$removePageConfig = $_POST;
 				$removePageConfig[ 'kickofflabs_landing_page_id' ] = 0;

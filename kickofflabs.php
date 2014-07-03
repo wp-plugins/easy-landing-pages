@@ -24,7 +24,7 @@ define( 'KICKOFFLABS_IMAGES', plugins_url( '', __FILE__ ) . '/img/' );
 
 
 // Define general constants
-define( 'KICKOFFLABS_PLUGIN_VERSION', '1.4' );
+define( 'KICKOFFLABS_PLUGIN_VERSION', '1.5' );
 define( 'KICKOFFLABS_API_HOST', 'https://api.kickofflabs.com' );
 
 // Define admin constants

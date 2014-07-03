@@ -4,7 +4,7 @@ Tags: kickofflabs, landing pages, splash pages, welcome pages, coming soon page,
 Requires at least: 3.5
 Tested up to: 3.5
 License: GPLv2 or later
-Tag: 1.4
+Tag: 1.5
 
 Get More Leads - And Convert More of Them - With Effortless Landing Pages + Smart Email Marketing + Referral Generation - Now for Wordpress!
 
@@ -91,6 +91,10 @@ Yes. You'll need an account with KickoffLabs to make this work.
 
 
 == Changelog ==
+
+= 1.5 =
+* Fixed E_STRICT errors
+* Added viewport restriction to the landing page
 
 = 1.4 =
 * Added in meta tags for Landing Page and Splash Page

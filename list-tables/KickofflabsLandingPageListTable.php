@@ -129,7 +129,7 @@ class KickofflabsLandingPageListTable extends WP_List_Table
 	 * @uses $this->get_pagenum()
 	 * @uses $this->set_pagination_args()
 	 **************************************************************************/
-	public function prepare_items( $storedLandingPages) {
+	public function prepare_items() {
 		/**
 		 * First, lets decide how many records per page to show
 		 */
