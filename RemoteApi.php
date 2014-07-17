@@ -224,7 +224,7 @@ class RemoteKickofflabsLandingPages implements Iterator
 
 		// Parse the results
 		if( array_key_exists( 'response', $kickofflabsLandingPages )
-			&& $kickofflabsLandingPages[ 'response' ][ 'code' ] === 200 )
+			&& $kickofflabsLandingPages[ 'response' ][ 'code' ] == 200 )
 		{
 			$decodedBody = json_decode( $kickofflabsLandingPages[ 'body' ] );
 			if( property_exists( $decodedBody, 'pages' ) ) {
