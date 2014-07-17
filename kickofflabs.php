@@ -4,7 +4,7 @@
 Plugin Name: Landing Pages for Wordpress
 Plugin URI: http://www.kickofflabs.com
 Description: Get More Leads - And Convert More of Them - With Effortless Landing Pages + Smart Email Marketing + Referral Generation - Now for WordPress!
-Version: 1.2
+Version: 1.6
 Author: KickoffLabs, lonnylot
 Author URI: http://www.kickofflabs.com
 */
@@ -24,7 +24,7 @@ define( 'KICKOFFLABS_IMAGES', plugins_url( '', __FILE__ ) . '/img/' );
 
 
 // Define general constants
-define( 'KICKOFFLABS_PLUGIN_VERSION', '1.2' );
+define( 'KICKOFFLABS_PLUGIN_VERSION', '1.6' );
 define( 'KICKOFFLABS_API_HOST', 'https://api.kickofflabs.com' );
 
 // Define admin constants
@@ -37,16 +37,16 @@ include( KICKOFFLABS_PLUGIN_PATH . 'Shortcode.php' );
 
 // Add our hooks
 if ( is_admin() ) {
-    // Include admin only files
-    include( KICKOFFLABS_PLUGIN_PATH . 'Admin.php' );
-    include( KICKOFFLABS_PLUGIN_PATH . 'RemoteApi.php' );
-    // Add a hook for the menu function at the top of Admin.php
-    add_action( 'admin_menu', 'kickofflabsAdminMenu' );
+	// Include admin only files
+	include( KICKOFFLABS_PLUGIN_PATH . 'Admin.php' );
+	include( KICKOFFLABS_PLUGIN_PATH . 'RemoteApi.php' );
+	// Add a hook for the menu function at the top of Admin.php
+	add_action( 'admin_menu', 'kickofflabsAdminMenu' );
 } else {
-    // Start our controls (constructors are called and do all the hooking required)
+	// Start our controls (constructors are called and do all the hooking required)
 	new KickofflabsLandingPages();
-    new KickofflabsSignupBar();
-    new KickofflabsWelcomeGate();
+	new KickofflabsSignupBar();
+	new KickofflabsWelcomeGate();
 }
 
 // Add a hook to register the widgets at the top of Widget.php
