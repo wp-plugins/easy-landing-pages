@@ -363,6 +363,7 @@ class KickofflabsLandingAdmin
 		$currentConfig[ $landingPageHash ] = array(
 			'page_id' => $foundLandingPage->page_id,
 			'path' => $uniqueSlug,
+			'list_id' => $foundLandingPage->list_id,
 			'favicon_link' => $foundLandingPage->favicon_link,
 			'title' => $foundLandingPage->title,
 			'page_title' => $foundLandingPage->page_title,
