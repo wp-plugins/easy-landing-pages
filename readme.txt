@@ -11,7 +11,7 @@ Get More Leads - And Convert More of Them - With Effortless Landing Pages + Smar
 
 == Description ==
 
-= <i>Please Read</i> =
+= <strong>Please Read</strong> =
 <b><i>This plugin requires you to have a paid account with KickoffLabs.</i></b>
 We help everyone build amazing landing pages and opt-in forms that can be published anywhere. We also enable auto responder emails and a viral boost referral system. It’s a unique combination and we encourage you to check out http://www.kickofflabs.com before downloading this plugin.
 
