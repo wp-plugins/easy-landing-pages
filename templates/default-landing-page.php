@@ -6,6 +6,7 @@ $foundLandingPage = $kickofflabsLandingPages->findByWordpressPageId( $post->ID )
 <html>
 <head>
 	<title><?php echo $foundLandingPage[ 'page_title' ]; ?></title>
+	<?php echo $foundLandingPage[ 'favicon_link' ]; ?>
 	<meta content="<?php echo $foundLandingPage[ 'open_graph_title' ]; ?>" property="og:title">
 	<meta content="<?php echo $foundLandingPage[ 'open_graph_description' ]; ?>" property="og:description">
 	<meta content='<?php echo $foundLandingPage[ 'open_graph_image' ]; ?>' property='og:image'>

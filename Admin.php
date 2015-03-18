@@ -215,17 +215,17 @@ class KickofflabsSignupBarAdmin
 
 		// Check if we are enabling/disabling the signup bar
 		$currentConfig = $this->signupBarConfig->getConfig();
-		if( $signupBar[ 'kickofflabs_landing_page_id' ] > 0
-			&& true === $this->validateLandingPageExists( $signupBar[ 'kickofflabs_landing_page_id' ] ) ) {
-			if( 0 == $currentConfig[ 'page_id' ] ) {
+		if( $signupBar[ 'kickofflabs_landing_page_list_id' ] > 0
+			&& true === $this->validateLandingPageExists( $signupBar[ 'kickofflabs_landing_pagelist_id' ] ) ) {
+			if( 0 == $currentConfig[ 'list_id' ] ) {
 				$this->currentMessages[] = 'signupbar_enabled';
 			}
-			$newConfig[ 'page_id' ] = $signupBar[ 'kickofflabs_landing_page_id' ];
+			$newConfig[ 'list_id' ] = $signupBar[ 'kickofflabs_landing_page_list_id' ];
 		} else {
-			if( $currentConfig[ 'page_id' ] ) {
+			if( $currentConfig[ 'list_id' ] ) {
 				$this->currentMessages[] = 'signupbar_disabled';
 			}
-			$newConfig[ 'page_id' ] = 0;
+			$newConfig[ 'list_id' ] = 0;
 		}
 
 		$this->signupBarConfig->updateConfig( $newConfig );
@@ -363,6 +363,7 @@ class KickofflabsLandingAdmin
 		$currentConfig[ $landingPageHash ] = array(
 			'page_id' => $foundLandingPage->page_id,
 			'path' => $uniqueSlug,
+			'favicon_link' => $foundLandingPage->favicon_link,
 			'title' => $foundLandingPage->title,
 			'page_title' => $foundLandingPage->page_title,
 			'meta_description' => $foundLandingPage->meta_description,

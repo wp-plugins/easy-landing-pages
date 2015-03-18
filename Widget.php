@@ -15,6 +15,7 @@ class SignupWidget extends WP_Widget
 {
 	private $defaultConfig = array(
 		'landing_page_id' => 0,
+		'list_id' => 0,
 		'signup_text' => 'Enter your email to subscribe:',
 		'placeholder_text' => 'Type your email here...',
 		'button_text' => 'Subscribe',

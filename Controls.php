@@ -54,6 +54,7 @@ class KickofflabsSignupBar
 	private $configName = 'kickofflabs_signup_bar';
 	private $configDefaults = array(
 		'page_id' => 0,
+		'list_id' => 0,
 		'signup_text' => 'Enter your email to subscribe:',
 		'placeholder_text' => 'Type your email here...',
 		'button_text' => 'Subscribe',
@@ -71,7 +72,7 @@ class KickofflabsSignupBar
 	{
 		// hook into 'get_footer' action to call sidebar
 		$currentConfig = $this->getConfig();
-		if( $currentConfig[ 'page_id' ] > 0 ) {
+		if( $currentConfig[ 'list_id' ] > 0 ) {
 			add_action( 'wp_footer', array( $this, 'addSignupBar' ) );
 			wp_enqueue_script( 'kickofflabs-signupbar', KICKOFFLABS_JS . 'signupbar.js', array(), false, true );
 		}
@@ -213,6 +214,7 @@ class KickofflabsWelcomeGate
 	private $configName = 'kickofflabs_welcome_gate';
 	private $configDefaults = array(
 		'page_id' => 0,
+		'list_id' => 0,
 		'skip_text' => 'Skip to page',
 		'repeat_visitors_cookie' => 30,
 		'where_to_gate' => 'home',
