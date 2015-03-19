@@ -382,6 +382,7 @@ class KickofflabsLandingAdmin
 			'page_id' => $foundLandingPage->page_id,
 			'path' => $uniqueSlug,
 			'list_id' => $foundLandingPage->list_id,
+			'list_name' => $foundLandingPage->list_name,
 			'favicon_link' => $foundLandingPage->favicon_link,
 			'title' => $foundLandingPage->title,
 			'page_title' => $foundLandingPage->page_title,
