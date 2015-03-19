@@ -14,7 +14,7 @@
 			<select name="kickofflabs_landing_page_id" id="kickofflabs_landing_page_id">
 				<option value="">None (disabled)</option>
 				<?php foreach( $this->kickofflabsLandingPages AS $kickofflabsLandingPage ): ?>
-					<option value="<?php echo $kickofflabsLandingPage->page_id; ?>"<?php if( $kickofflabsLandingPage->page_id == $currentConfig[ 'page_id' ] ): ?> SELECTED<?php endif; ?>><?php echo $kickofflabsLandingPage->title; ?></option>
+					<option value="<?php echo $kickofflabsLandingPage->page_id; ?>"<?php if( $kickofflabsLandingPage->page_id == $currentConfig[ 'page_id' ] ): ?> SELECTED<?php endif; ?>><?php echo $kickofflabsLandingPage->list_name; ?> - <?php echo $kickofflabsLandingPage->title; ?></option>
 				<?php endforeach; ?>
 			</select>
 		</p>
