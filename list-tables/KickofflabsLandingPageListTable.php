@@ -48,9 +48,11 @@ class KickofflabsLandingPageListTable extends WP_List_Table
 	public function column_title( $item )
 	{
 		$action = array(
-			'view' => sprintf( '<a href="%s">View</a>', get_permalink( $item[ 'wordpress_page_id' ] ) ),
-			'edit' => sprintf( '<a href="https://app.kickofflabs.com/dashboard/campaigns/%s/landing_pages/%s">Edit</a>',$item[ 'list_id' ], $item[ 'page_id' ] ),
-			'delete' => sprintf( '<a href="?page=%s&action=delete&hash=%s">Delete</a>', $_REQUEST[ 'page' ], $item[ 'hash' ] )
+			'view' => sprintf( '<a href="%s">View Live</a>', get_permalink( $item[ 'wordpress_page_id' ] ) ),
+			'edit' => sprintf( '<a target="_blank" href="https://app.kickofflabs.com/dashboard/campaigns/%s/landing_pages/%s">Edit in KickoffLabs</a>',$item[ 'list_id' ], $item[ 'page_id' ] ),
+			'refresh' => sprintf( '<a href="?page=%s&action=refresh&hash=%s">Refresh Page from KickoffLabs</a>', $_REQUEST[ 'page' ], $item[ 'hash' ] ),
+			'delete' => sprintf( '<a href="?page=%s&action=delete&hash=%s">Delete from Wordpress</a>', $_REQUEST[ 'page' ], $item[ 'hash' ] )
+			
 		);
 		return sprintf( '%1$s <span style="color:silver;">(id:%2$s)</span>%3$s',
 			$item[ 'title' ],

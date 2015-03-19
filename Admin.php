@@ -259,6 +259,7 @@ class KickofflabsLandingAdmin
 		'new_login_valid' => array('color' => '4AB915', 'text' => 'Your login has been verified.'),
 		'new_landing_page_id_invalid' => array('color' => '888', 'text' => 'The landing page is invalid. Please double-check it.'),
 		'new_landing_page_path_invalid' => array('color' => '888', 'text' => 'The landing page path is invalid. Only letters, numbers, and dashes are allowed.'),
+		'landing_page_updated' => array('color' => '4AB915', 'text' => 'The latest landing page data has been pulled from KickoffLabs'),
 		'no_api_key' => array('color' => 'e81b1b', 'text' => 'Please visit the <a href="?page=kickofflabs-api">Setup</a> to complete the plug-in setup.' )
 	);
 	private $updated = false;
@@ -270,6 +271,8 @@ class KickofflabsLandingAdmin
 	{
 		// Get our list table
 		require KICKOFFLABS_LIST_TABLES . 'KickofflabsLandingPageListTable.php';
+		
+		wp_enqueue_style( 'kickofflabs-signupbar-admin', KICKOFFLABS_CSS . 'admin/landingpage.css' );
 
 		$this->landingPages = new KickofflabsLandingPages();
 	}
@@ -317,8 +320,23 @@ class KickofflabsLandingAdmin
 				}
 			} elseif ( isset($_GET['action'] ) && 'delete' === $_GET[ 'action' ] ) {
 				$this->deleteLandingPage( $_GET[ 'hash' ] );
+			} elseif ( isset($_GET['action'] ) && 'refresh' === $_GET[ 'action' ] ) {
+				$this->refreshLandingPage( $_GET[ 'hash' ] );
 			}
 		}
+	}
+	
+	/**
+	 * @description Refresh a landing page
+	 * @param $hash
+	 * @return bool
+	 */
+	private function refreshLandingPage( $hash )
+	{
+		$currentConfig = $this->landingPages->getConfig();		
+		$this->deleteLandingPage($hash);
+		$this->addLandingPage($currentConfig[ $hash ][ 'page_id' ], $currentConfig[$hash][ 'path' ] );
+		$this->currentMessages[] = 'landing_page_updated';
 	}
 
 	/**
