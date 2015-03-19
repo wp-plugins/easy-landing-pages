@@ -3,7 +3,7 @@
 	<select class="widefat" id="<?php echo $this->get_field_id( 'landing_page_id' ); ?>" name="<?php echo $this->get_field_name( 'landing_page_id' ); ?>">
 		<option value="">None (disabled)</option>
 		<?php foreach( $landingPages AS $landingPage ): ?>
-			<option value="<?php echo $landingPage->page_id; ?>"<?php if( $instance[ 'landing_page_id' ] == $landingPage->page_id ):?> SELECTED<?php endif; ?>><?php echo $landingPage->title; ?></option>
+			<option value="<?php echo $landingPage->list_id; ?>"<?php if( $instance[ 'landing_page_id' ] == $landingPage->page_id ):?> SELECTED<?php endif; ?>><?php echo $landingPage->list_name; ?> - <?php echo $landingPage->title; ?></option>
 		<?php endforeach; ?>
 	</select>
 </p>

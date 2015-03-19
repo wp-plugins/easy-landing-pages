@@ -1,5 +1,5 @@
 <div id="kickofflabs_signup_bar"
-	 data-landing_page_id="<?php echo $currentConfig[ 'page_id' ]; ?>"
+	 data-landing_page_id="<?php echo $currentConfig[ 'list_id' ]; ?>"
 	 data-signup_text="<?php echo $currentConfig[ 'signup_text' ]; ?>"
 	 data-placeholder_text="<?php echo $currentConfig[ 'placeholder_text' ]; ?>"
 	 data-button_text="<?php echo $currentConfig[ 'button_text' ]; ?>"

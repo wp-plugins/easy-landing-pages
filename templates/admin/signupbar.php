@@ -11,12 +11,12 @@
 		<?php endforeach; ?>
 		<?php wp_nonce_field( KICKOFFLABS_NONCE_KEY ) ?>
 		<h3>Landing Page</h3>
-		<p><label for="kickofflabs_landing_page_id">Choose a Landing Page Customer List to Enable the Signup bar.</label></p>
+		<p><label for="kickofflabs_landing_page_list_id">Choose a Landing Page Customer List to Enable the Signup bar.</label></p>
 		<p>
-			<select name="kickofflabs_landing_page_id" id="kickofflabs_landing_page_id">
+			<select name="kickofflabs_landing_page_list_id" id="kickofflabs_landing_page_list_id">
 				<option value="">None (disabled)</option>
 				<?php foreach( $this->kickofflabsLandingPages AS $kickofflabsLandingPage ): ?>
-					<option value="<?php echo $kickofflabsLandingPage->page_id; ?>"<?php if( $kickofflabsLandingPage->page_id == $currentConfig[ 'page_id' ] ): ?> SELECTED<?php endif; ?>><?php echo $kickofflabsLandingPage->title; ?></option>
+					<option value="<?php echo $kickofflabsLandingPage->list_id; ?>"<?php if( $kickofflabsLandingPage->list_id == $currentConfig[ 'list_id' ] ): ?> SELECTED<?php endif; ?>><?php echo $kickofflabsLandingPage->list_name; ?> - <?php echo $kickofflabsLandingPage->title; ?></option>
 				<?php endforeach; ?>
 			</select>
 		</p>
@@ -44,7 +44,7 @@
 			</p>
 			<p class="submit">
 				<input type="submit" name="submit" value="Update Signup Bar" />
-				<?php if( $currentConfig[ 'page_id' ] ): ?>
+				<?php if( $currentConfig[ 'list_id' ] ): ?>
 					<input type="submit" name="remove" id="submit-remove" value="Remove Signup Bar" />
 				<?php endif; ?>
 			</p>

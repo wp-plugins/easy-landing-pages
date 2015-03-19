@@ -188,7 +188,7 @@ class KickofflabsSignupBarAdmin
 			} elseif( isset( $_POST[ 'remove' ] ) ) {
 				check_admin_referer( KICKOFFLABS_NONCE_KEY );
 				$removePageConfig = $_POST;
-				$removePageConfig[ 'kickofflabs_landing_page_id' ] = null;
+				$removePageConfig[ 'kickofflabs_landing_page_list_id' ] = null;
 				$this->overwriteConfig( $removePageConfig );
 				$this->updated = true;
 			}
@@ -215,8 +215,7 @@ class KickofflabsSignupBarAdmin
 
 		// Check if we are enabling/disabling the signup bar
 		$currentConfig = $this->signupBarConfig->getConfig();
-		if( $signupBar[ 'kickofflabs_landing_page_list_id' ] > 0
-			&& true === $this->validateLandingPageExists( $signupBar[ 'kickofflabs_landing_pagelist_id' ] ) ) {
+		if( $signupBar[ 'kickofflabs_landing_page_list_id' ] > 0 ) {
 			if( 0 == $currentConfig[ 'list_id' ] ) {
 				$this->currentMessages[] = 'signupbar_enabled';
 			}
