@@ -34,12 +34,13 @@ class SignupWidget extends WP_Widget
 	{
 		parent::__construct( '', 'KickoffLabs Sign Up' );
 	}
-
+	
+	
 	/**
-	 * @description Display the widget on the page
-	 * @param array $args
-	 * @param array $instance
-	 */
+	* @description Display the widget on the page
+	* @param array $args
+	* @param array $instance
+	*/
 	public function widget( $args, $instance )
 	{
 		if( $instance[ 'landing_page_id' ] > 0 ){
@@ -75,10 +76,13 @@ class SignupWidget extends WP_Widget
 		// Pull in the landing pages from KickoffLabs
 		$landingPages = new RemoteKickofflabsLandingPages( $apiConfig[ 'api_key' ] );
 		// Verify the landing page exists on KickoffLabs
-		if( is_null( $landingPages->findPageId( $newInstance[ 'landing_page_id' ] ) ) ) {
+		$lp = $landingPages->findPageId( $newInstance[ 'landing_page_id' ] );
+		if( is_null( $lp ) ) {
 			$instance[ 'landing_page_id' ] = 0;
+			$instance[ 'list_id' ] = 0;
 		} else {
 			$instance[ 'landing_page_id' ] = $newInstance[ 'landing_page_id' ];
+			$instance[ 'list_id' ] = $lp->list_id;
 		}
 
 		return $instance;

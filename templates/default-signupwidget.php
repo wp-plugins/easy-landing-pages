@@ -1,6 +1,6 @@
 <?php echo $args[ 'before_widget' ]; ?>
 	<div id="kickofflabs_embed_form"
-		 data-landing_page_id="<?php echo $instance[ 'landing_page_id' ]; ?>"
+		 data-landing_page_id="<?php echo $instance[ 'list_id' ]; ?>"
 		 data-signup_text="<?php echo $instance[ 'signup_text' ]; ?>"
 		 data-placeholder_text="<?php echo $instance[ 'placeholder_text' ]; ?>"
 		 data-button_text="<?php echo $instance[ 'button_text' ]; ?>"
