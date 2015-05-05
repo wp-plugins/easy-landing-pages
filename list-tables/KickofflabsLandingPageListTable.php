@@ -7,7 +7,6 @@ class KickofflabsLandingPageListTable extends WP_List_Table
 	public function __construct( $args = array(), $kickofflabsLandingPages )
 	{
 		$this->kickofflabsLandingPages = $kickofflabsLandingPages;
-		$this->save();
 		
 		parent::__construct( array(
 			'singular' => 'Landing Page',

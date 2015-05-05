@@ -92,7 +92,7 @@ Yes. You'll need an account with KickoffLabs to make this work.
 
 == Changelog ==
 
-= 1.8 = 
+= 1.9 = 
 * Landing page list isn't blank in wordpress 4.2.1
 
 = 1.7 = 
