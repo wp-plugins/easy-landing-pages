@@ -284,21 +284,22 @@ class KickofflabsLandingAdmin
 		// Get the API Key
 		$kickofflabsApi = new KickofflabsAPI();
 		$generalConfigs = $kickofflabsApi->getConfig();
-
 		if( empty( $generalConfigs[ 'api_key' ] ) ) {
 			$this->currentMessages[] = 'no_api_key';
 		}
 
 		// Retrieve our landing pages from kickofflabs
 		$this->kickofflabsLandingPages = new RemoteKickofflabsLandingPages( $generalConfigs[ 'api_key' ] );
-
+		//write_log($this->kickofflabsLandingPages);
+		
 		// Because of WordPress workflow we call the save function here
 		$this->save();
 
 		// Get our list table
 		$listTable = new KickofflabsLandingPageListTable( array(), $this->kickofflabsLandingPages );
 		$listTable->prepare_items();
-
+		//write_log("writing landing pages");
+		//write_log($this->kickofflabsLandingPages);
 		require( KICKOFFLABS_TEMPLATES . 'admin/landingpage.php' );
 	}
 

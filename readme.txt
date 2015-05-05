@@ -92,6 +92,14 @@ Yes. You'll need an account with KickoffLabs to make this work.
 
 == Changelog ==
 
+= 1.8 = 
+* Landing page list isn't blank in wordpress 4.2.1
+
+= 1.7 = 
+* Fixed issues with not supporting latest KickoffLabs updates
+* Added support for extra landing page header tags from KickoffLabs
+* Added support to view landing page list by campaigns as well as just pages. 
+
 = 1.6 =
 * Fixed issue with HTTP response when using PHP streams
 

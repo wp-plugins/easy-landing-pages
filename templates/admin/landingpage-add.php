@@ -3,6 +3,7 @@
 	<p>
 		<select name="kickofflabs_landing_page_id" id="kickofflabs_landing_page_id" style="float: none;">
 			<option value="">Select Landing Page&hellip;</option>
+
 			<?php foreach( $this->kickofflabsLandingPages AS $kickofflabsLandingPage ): ?>
 				<option value="<?php echo $kickofflabsLandingPage->page_id; ?>"><?php echo $kickofflabsLandingPage->list_name; ?> - <?php echo $kickofflabsLandingPage->title; ?></option>
 			<?php endforeach; ?>
